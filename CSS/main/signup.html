@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+  <div class="form">
+    <h1>Sign Up</h1>
+
+    <!-- Floating Input for Name -->
+    <div class="floating">
+      <input 
+        id="name" 
+        type="text" 
+        name="name" 
+        placeholder="Full Name" 
+        class="floating__input" 
+        autocomplete="off" 
+        required
+      />
+      <label for="name" class="floating__label">Full Name</label>
+      <span class="error-message" id="name-error"></span> <!-- Error message for Name -->
+    </div>
+
+    <!-- Floating Input for Email -->
+    <div class="floating">
+      <input 
+        id="email" 
+        type="email" 
+        name="email" 
+        placeholder="Email" 
+        class="floating__input" 
+        autocomplete="off" 
+        required
+      />
+      <label for="email" class="floating__label">Email</label>
+      <span class="error-message" id="email-error"></span> <!-- Error message for Email -->
+    </div>
+
+    <!-- Floating Input for Password -->
+    <div class="floating">
+      <input 
+        id="password" 
+        type="password" 
+        name="password" 
+        placeholder="Password" 
+        class="floating__input" 
+        autocomplete="off" 
+        required
+      />
+      <label for="password" class="floating__label">Password</label>
+      <span class="error-message" id="password-error"></span> <!-- Error message for Password -->
+    </div>
+
+    <!-- Floating Input for Confirm Password -->
+    <div class="floating">
+      <input 
+        id="confirm-password" 
+        type="password" 
+        name="confirm-password" 
+        placeholder="Confirm Password" 
+        class="floating__input" 
+        autocomplete="off" 
+        required
+      />
+      <label for="confirm-password" class="floating__label">Confirm Password</label>
+      <span class="error-message" id="confirm-password-error"></span> <!-- Error message for Confirm Password -->
+    </div>
+
+    <button class="button" id="signup-button">Sign Up</button>
+    <p>Already have an account? <a href="login.html">Log In</a></p>
+  </div>
+
+  <script>
+    // Redirect to login page on signup button click
+    document.getElementById('signup-button').addEventListener('click', (e) => {
+      e.preventDefault(); // Prevent default form submission
+      alert('Signed up successfully! Redirecting to login page...');
+      window.location.href = 'login.html';
+    });
+  </script>
+
+  <script src="../JS/signup.js"></script>
+</body>
+</html>
